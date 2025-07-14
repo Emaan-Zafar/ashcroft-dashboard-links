@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <title>Sales & SVM Button</title>
   <style>
-    body {
-      background-color: #0B1E36;
-      font-family: Arial, sans-serif;
-      padding: 20px;
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
     }
 
     .button-78 {
@@ -28,11 +28,8 @@
       font-weight: 800;
       justify-content: center;
       line-height: 24px;
-      margin: 0;
-      min-height: 64px;
       outline: none;
       overflow: visible;
-      padding: 19px 32px;
       pointer-events: auto;
       position: relative;
       text-align: center;
@@ -42,10 +39,14 @@
       -webkit-user-select: none;
       touch-action: manipulation;
       vertical-align: middle;
-      width: auto;
       word-break: keep-all;
       z-index: 0;
       gap: 12px;
+
+      /* ✅ Fixed size */
+      width: 300px;
+      height: 64px;
+      padding: 0 24px;
     }
 
     .button-78:before,
@@ -53,7 +54,6 @@
       border-radius: 80px;
     }
 
-    /* 🟧 Border (outer) */
     .button-78:before {
       background-image: linear-gradient(92.83deg, #ff7426 0%, #f93a13 100%);
       content: "";
@@ -67,7 +67,6 @@
       z-index: -2;
     }
 
-    /* 🔷 Inner fill (blue) */
     .button-78:after {
       background-color: initial;
       background-image: linear-gradient(92.83deg, #193c63 0%, #0b1e36 100%);
@@ -83,7 +82,6 @@
       z-index: -1;
     }
 
-    /* Hover effect */
     .button-78:hover:not(:disabled):before {
       background: linear-gradient(92.83deg, #ff7426 0%, #f93a13 100%);
     }
@@ -102,7 +100,7 @@
     }
 
     .button-78:active:not(:disabled):before {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0%, #f93a13 100%);
     }
 
     .button-78:active:not(:disabled):after {
@@ -121,6 +119,13 @@
     .icon {
       width: 24px;
       height: 24px;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
   </style>
 </head>
