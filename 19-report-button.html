@@ -6,45 +6,132 @@
   <style>
     body {
       background-color: #0B1E36;
-      color: #FFFFFF;
       font-family: Arial, sans-serif;
       padding: 20px;
     }
-    .nav-button {
-      display: block;
-      background-color: #122640;
-      color: #FFFFFF;
+
+    .button-78 {
+      align-items: center;
+      appearance: none;
+      background-clip: padding-box;
+      background-color: initial;
+      background-image: none;
+      border-style: none;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: inline-flex;
+      flex-direction: row;
+      flex-shrink: 0;
+      font-family: Eina01, sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      justify-content: center;
+      line-height: 24px;
+      margin: 0;
+      min-height: 64px;
+      outline: none;
+      overflow: visible;
+      padding: 19px 32px;
+      pointer-events: auto;
+      position: relative;
+      text-align: center;
       text-decoration: none;
-      padding: 14px 20px;
-      border-radius: 6px;
-      font-size: 18px;
-      transition: background-color 0.2s, box-shadow 0.2s;
-    }
-    .nav-button:hover {
-      background-color: #17314D;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    }
-    .icon {
+      text-transform: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
       vertical-align: middle;
-      margin-right: 12px;
+      width: auto;
+      word-break: keep-all;
+      z-index: 0;
+      gap: 12px;
+    }
+
+    .button-78:before,
+    .button-78:after {
+      border-radius: 80px;
+    }
+
+    .button-78:before {
+      background-image: linear-gradient(92.83deg, #ff7426 0%, #f93a13 100%);
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -2;
+    }
+
+    .button-78:after {
+      background-color: initial;
+      background-image: linear-gradient(92.83deg, #193c63 0%, #0b1e36 100%);
+      bottom: 4px;
+      content: "";
+      display: block;
+      left: 4px;
+      overflow: hidden;
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      transition: all 100ms ease-out;
+      z-index: -1;
+    }
+
+    .button-78:hover:not(:disabled):before {
+      background: linear-gradient(92.83deg, #ff7426 0%, #f93a13 100%);
+    }
+
+    .button-78:hover:not(:disabled):after {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      transition-timing-function: ease-in;
+      opacity: 0;
+    }
+
+    .button-78:active:not(:disabled) {
+      color: #ccc;
+    }
+
+    .button-78:active:not(:disabled):before {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+    }
+
+    .button-78:active:not(:disabled):after {
+      background-image: linear-gradient(#193c63 0, #0b1e36 100%);
+      bottom: 4px;
+      left: 4px;
+      right: 4px;
+      top: 4px;
+    }
+
+    .button-78:disabled {
+      cursor: default;
+      opacity: .24;
+    }
+
+    .icon {
       width: 24px;
       height: 24px;
-      fill: #F58B4B;
-    }
-    .button-label {
-      vertical-align: middle;
     }
   </style>
 </head>
 <body>
 
-<a class="nav-button" href="https://us-east-1.quicksight.aws.amazon.com/sn/account/ashcroft-quicksight/analyses/abb644fe-c38f-428e-b1cb-421d290b3dfa/sheets/ce90f4e4-0b7a-4d4e-afbe-d5ed3dcfc8b4" target="_blank">
-  <svg class="icon" viewBox="0 0 24 24">
-    <rect x="4" y="12" width="4" height="8"/>
-    <rect x="10" y="8" width="4" height="12"/>
-    <rect x="16" y="4" width="4" height="16"/>
-  </svg>
-  <span class="button-label">View 19 Report Dashboard</span>
+<a href="https://us-east-1.quicksight.aws.amazon.com/sn/account/ashcroft-quicksight/analyses/abb644fe-c38f-428e-b1cb-421d290b3dfa/sheets/ce90f4e4-0b7a-4d4e-afbe-d5ed3dcfc8b4" target="_blank">
+  <button class="button-78" role="button">
+    <svg class="icon" viewBox="0 0 24 24">
+      <rect x="4" y="12" width="3" height="8" fill="#F58B4B"/>
+      <rect x="10" y="8" width="3" height="12" fill="#4BA3F5"/>
+      <rect x="16" y="4" width="3" height="16" fill="#F58B4B"/>
+    </svg>
+    View 19 Report Dashboard
+  </button>
 </a>
 
 </body>
